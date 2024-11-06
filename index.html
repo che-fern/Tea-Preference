@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+</head>
+<body>
+
+    <h1>Tea Preference Form</h1>
+
+    <div class="form-container">
+      <form id="teaForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+  
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+  
+        <label for="tea">Favorite Tea:</label>
+        <select id="tea" required>
+          <option value="Green Tea">Green Tea</option>
+          <option value="Black Tea">Black Tea</option>
+          <option value="Herbal Tea">Herbal Tea</option>
+          <option value="Oolong Tea">Oolong Tea</option>
+        </select>
+  
+        <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+  
+    <script>
+      function submitForm() {
+        const email = document.getElementById('email').value;
+        const date = document.getElementById('date').value;
+        const tea = document.getElementById('tea').value;
+  
+        console.log(`Form submitted:`);
+        console.log(`Email: ${email}`);
+        console.log(`Date: ${date}`);
+        console.log(`Favorite Tea: ${tea}`);
+  
+        // Clear form fields
+        document.getElementById('teaForm').reset();
+  
+        // Alert success
+        alert(`Form submitted successfully!`);
+      }
+    </script>
+
+</body>
+</html>
